@@ -1,6 +1,8 @@
 const express = require('express');
 const exhbs = require('express-handlebars');
-const products = require('./products.json')
+const products = require('./products.json');
+
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -36,6 +38,6 @@ app.get('/product/:productId', (req, res) => {
 
 //product/
 
-app.listen(3000, () => {
-    console.log(`Aplication server is running on port ${3000}`)
+app.listen(PORT, () => {
+    console.log(`Aplication server is running on port ${PORT}`)
 })
